@@ -1,0 +1,734 @@
+/* ===== СБРОС И БАЗОВЫЕ СТИЛИ ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #fff;
+    font-weight: 400;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ===== КНОПКИ ===== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 28px;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #e53935;
+    color: white;
+    border: 2px solid #e53935;
+}
+
+.btn-primary:hover {
+    background-color: #c62828;
+    border-color: #c62828;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(229, 57, 53, 0.2);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #e53935;
+    border: 2px solid #e53935;
+}
+
+.btn-secondary:hover {
+    background-color: #e53935;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #333;
+    border: 2px solid #ddd;
+}
+
+.btn-outline:hover {
+    border-color: #e53935;
+    color: #e53935;
+}
+
+.btn-large {
+    padding: 15px 35px;
+    font-size: 18px;
+}
+
+.btn-hero {
+    padding: 15px 40px;
+    font-size: 18px;
+    margin-right: 15px;
+}
+
+/* ===== ШАПКА САЙТА ===== */
+.header {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* Логотип */
+.logo a {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.logo-sweet {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    letter-spacing: -0.5px;
+}
+
+.logo-bakery {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    color: #e53935;
+    margin-top: -5px;
+}
+
+.logo-subtitle {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+/* Контакты в шапке */
+.header-contacts {
+    display: flex;
+    gap: 30px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #555;
+}
+
+.contact-item i {
+    color: #e53935;
+    font-size: 16px;
+}
+
+.contact-item.highlight {
+    font-weight: 700;
+    color: #333;
+}
+
+/* Навигация */
+.nav {
+    padding-top: 15px;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.nav-list a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #555;
+    padding: 5px 0;
+    position: relative;
+}
+
+.nav-list a:hover {
+    color: #e53935;
+}
+
+.nav-list a.active {
+    color: #e53935;
+    font-weight: 600;
+}
+
+.nav-list a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #e53935;
+}
+
+.nav-cta {
+    background-color: #e53935;
+    color: white !important;
+    padding: 8px 20px !important;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+.nav-cta:hover {
+    background-color: #c62828;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    padding: 5px;
+}
+
+/* ===== ГЕРОЙ-СЕКЦИЯ ===== */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('https://images.unsplash.com/photo-1586985288623-e2a8f759b6aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-main {
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+
+.hero-sub {
+    font-size: 32px;
+    font-weight: 300;
+    color: #ffccbc;
+}
+
+.hero-description {
+    font-size: 18px;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.9;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* ===== СЕКЦИЯ С ТОВАРАМИ ===== */
+.products-section {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Сетка товаров */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Бейджи */
+.product-badges {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 2;
+}
+
+.badge {
+    padding: 5px 12px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 3px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-new {
+    background-color: #4caf50;
+}
+
+.badge-top {
+    background-color: #ff9800;
+}
+
+/* Изображение товара */
+.product-image {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+/* Контент карточки */
+.product-content {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.3;
+    flex-grow: 0;
+}
+
+.product-specs {
+    margin-bottom: 15px;
+    flex-grow: 0;
+}
+
+.spec {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.spec i {
+    color: #e53935;
+    width: 16px;
+}
+
+.spec strong {
+    color: #333;
+    font-weight: 600;
+}
+
+.product-description {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.5;
+    margin-top: auto;
+    flex-grow: 1;
+}
+
+.section-footer {
+    text-align: center;
+}
+
+/* ===== ИНФОРМАЦИОННАЯ СЕКЦИЯ ===== */
+.info-section {
+    padding: 80px 0;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.info-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.info-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.info-text {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 35px;
+    line-height: 1.6;
+}
+
+.info-text p {
+    margin-bottom: 15px;
+}
+
+.info-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* ===== ПОДВАЛ ===== */
+.footer {
+    background-color: #333;
+    color: #bbb;
+    padding: 60px 0 30px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-logo {
+    margin-bottom: 20px;
+}
+
+.footer-logo .logo-text {
+    margin-bottom: 5px;
+}
+
+.footer-logo .logo-sweet {
+    color: #fff;
+    font-size: 22px;
+}
+
+.footer-logo .logo-bakery {
+    color: #ffccbc;
+    font-size: 22px;
+}
+
+.footer-logo .logo-subtitle {
+    color: #aaa;
+    font-size: 13px;
+}
+
+.footer-description {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #999;
+}
+
+.footer-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.footer-contacts li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.footer-contacts i {
+    color: #e53935;
+    margin-right: 10px;
+    margin-top: 3px;
+    width: 16px;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    font-size: 14px;
+    color: #bbb;
+}
+
+.footer-links a:hover {
+    color: #fff;
+    padding-left: 5px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-copyright {
+    font-size: 14px;
+    color: #999;
+}
+
+.footer-legal {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-legal a {
+    font-size: 14px;
+    color: #999;
+}
+
+.footer-legal a:hover {
+    color: #fff;
+}
+
+/* ===== АДАПТИВНОСТЬ ===== */
+@media (max-width: 992px) {
+    .header-contacts {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .hero-title {
+        font-size: 36px;
+    }
+    
+    .hero-main {
+        font-size: 32px;
+    }
+    
+    .hero-sub {
+        font-size: 28px;
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+    
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .header-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        gap: 0;
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        padding: 20px;
+        z-index: 1000;
+    }
+    
+    .nav-list.active {
+        display: flex;
+    }
+    
+    .nav-list li {
+        width: 100%;
+    }
+    
+    .nav-list a {
+        display: block;
+        padding: 12px 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    
+    .nav-list a:last-child {
+        border-bottom: none;
+    }
+    
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 20px;
+    }
+    
+    .hero {
+        padding: 60px 0;
+    }
+    
+    .hero-title {
+        font-size: 28px;
+    }
+    
+    .hero-main {
+        font-size: 24px;
+    }
+    
+    .hero-sub {
+        font-size: 22px;
+    }
+    
+    .hero-buttons, .info-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn-hero {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .product-image {
+        height: 200px;
+    }
+    
+    .section-title {
+        font-size: 24px;
+    }
+    
+    .info-title {
+        font-size: 24px;
+    }
+}

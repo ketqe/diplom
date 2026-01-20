@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Торт "Наполеон" | SweetBakery</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <!-- Та же шапка, меняем active -->
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo">
+                    <a href="index.html">
+                        <i class="fas fa-birthday-cake"></i>
+                        <span>SweetBakery</span>
+                    </a>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html">Каталог</a></li>
+                        <li><a href="blog.html">Рецепты</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <a href="tel:+79991234567" class="phone">
+                        <i class="fas fa-phone"></i>
+                        <span>+7 (999) 123-45-67</span>
+                    </a>
+                </div>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="product-page">
+        <div class="container">
+            <!-- Хлебные крошки -->
+            <div class="breadcrumbs">
+                <a href="index.html">Главная</a> / 
+                <a href="catalog.html">Каталог</a> / 
+                <a href="catalog.html">Торты</a> / 
+                <span>Торт "Наполеон"</span>
+            </div>
+
+            <div class="product-details">
+                <!-- Галерея изображений слева -->
+                <div class="product-gallery">
+                    <div class="main-image">
+                        <img src="https://via.placeholder.com/500x400/FFE4E1/000?text=Торт+Наполеon+вид+сверху" alt="Торт Наполеон" id="mainImage">
+                    </div>
+                    <div class="thumbnails">
+                        <img src="https://via.placeholder.com/100x80/FFE4E1/000?text=Вид+1" alt="Вид 1" class="thumbnail active">
+                        <img src="https://via.placeholder.com/100x80/F0F8FF/000?text=Вид+2" alt="Вид 2" class="thumbnail">
+                        <img src="https://via.placeholder.com/100x80/FFF0F5/000?text=Разрез" alt="Разрез" class="thumbnail">
+                        <img src="https://via.placeholder.com/100x80/F5FFFA/000?text=Упаковка" alt="Упаковка" class="thumbnail">
+                    </div>
+                </div>
+
+                <!-- Информация о товаре справа -->
+                <div class="product-info-details">
+                    <h1 class="product-title-main">Торт "Наполеон" классический</h1>
+                    
+                    <div class="product-meta">
+                        <span class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span class="rating-text">4.7 (128 отзывов)</span>
+                        </span>
+                        <span class="sku">Артикул: NB-001</span>
+                    </div>
+
+                    <p class="product-description-main">
+                        Классический слоёный торт с нежным заварным кремом. Готовится по традиционному рецепту с использованием натурального сливочного масла. Идеален для праздничного стола.
+                    </p>
+
+                    <div class="product-specs">
+                        <div class="spec">
+                            <span class="spec-title">Вес:</span>
+                            <span class="spec-value">1.8 кг</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-title">Диаметр:</span>
+                            <span class="spec-value">22 см</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-title">Количество персон:</span>
+                            <span class="spec-value">8-10</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-title">Срок хранения:</span>
+                            <span class="spec-value">72 часа при +4°C</span>
+                        </div>
+                    </div>
+
+                    <div class="composition">
+                        <h3>Состав:</h3>
+                        <p>Мука пшеничная, масло сливочное, яйца куриные, молоко, сахар, ванилин, соль. Без консервантов и искусственных добавок.</p>
+                        <p class="allergy-info"><i class="fas fa-exclamation-triangle"></i> Содержит глютен, лактозу, яйца</p>
+                    </div>
+
+                    <div class="price-block">
+                        <div class="price-main">1 800 ₽</div>
+                        <div class="old-price">2 100 ₽</div>
+                        <div class="discount-badge">-14%</div>
+                    </div>
+
+                    <div class="order-block">
+                        <div class="quantity-selector">
+                            <button class="qty-btn minus">-</button>
+                            <input type="number" value="1" min="1" max="10" class="qty-input">
+                            <button class="qty-btn plus">+</button>
+                        </div>
+                        
+                        <div class="order-options">
+                            <label><input type="checkbox"> Добавить поздравительную открытку (+50 ₽)</label>
+                            <label><input type="checkbox"> Подарочная упаковка (+200 ₽)</label>
+                        </div>
+
+                        <div class="product-actions">
+                            <button class="btn btn-primary btn-large" id="addToCart">
+                                <i class="fas fa-shopping-cart"></i> Добавить в корзину
+                            </button>
+                            <button class="btn btn-secondary btn-large" id="buyNow">
+                                Купить сейчас
+                            </button>
+                        </div>
+
+                        <div class="delivery-info">
+                            <p><i class="fas fa-shipping-fast"></i> Доставим сегодня, если закажете до 14:00</p>
+                            <p><i class="fas fa-phone"></i> Для индивидуального заказа звоните: +7 (999) 123-45-67</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Дополнительные вкладки -->
+            <div class="product-tabs">
+                <div class="tabs-header">
+                    <button class="tab-btn active" data-tab="description">Описание</button>
+                    <button class="tab-btn" data-tab="reviews">Отзывы (128)</button>
+                    <button class="tab-btn" data-tab="delivery">Доставка</button>
+                </div>
+                
+                <div class="tabs-content">
+                    <div class="tab-pane active" id="description">
+                        <h3>О торте "Наполеон"</h3>
+                        <p>Наш торт готовится вручную с соблюдением традиционной технологии. Каждый корж выпекается отдельно, что обеспечивает идеальную слоистость. Заварной крем готовится на медленном огне с постоянным помешиванием.</p>
+                        <p>Рекомендуем подавать торт комнатной температуры для раскрытия всех вкусовых оттенков.</p>
+                    </div>
+                    
+                    <div class="tab-pane" id="reviews">
+                        <p>Здесь будут отзывы покупателей.</p>
+                    </div>
+                    
+                    <div class="tab-pane" id="delivery">
+                        <p>Доставка по Москве в день заказа. Самовывоз доступен с 10:00 до 20:00.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Похожие товары -->
+            <section class="related-products">
+                <h2 class="section-title">Похожие товары</h2>
+                <div class="products-grid">
+                    <!-- 4 карточки похожих товаров -->
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="https://via.placeholder.com/300x200/F0F8FF/000?text=Торт+Медовик" alt="Торт Медовик">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Торт "Медовик"</h3>
+                            <p class="product-description">Нежные медовые коржи</p>
+                            <div class="product-bottom">
+                                <span class="product-price">1 900 ₽</span>
+                                <a href="product.html" class="btn btn-small">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Ещё 3 карточки аналогично -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Подвал (такой же) -->
+    <footer class="footer">
+        <!-- Копируем футер из index.html -->
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/product.js"></script>
+</body>
+</html>

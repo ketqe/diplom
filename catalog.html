@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог продукции | «Сурский кондитер»</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/catalog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Шапка сайта (такая же как на главной) -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="header-top">
+                <div class="logo">
+                    <a href="index.html">
+                        <div class="logo-text">
+                            <span class="logo-sweet">Сладости</span>
+                            <span class="logo-bakery">для радости</span>
+                        </div>
+                        <div class="logo-subtitle">«Сурский кондитер»</div>
+                    </a>
+                </div>
+                <div class="header-contacts">
+                    <div class="contact-item"><i class="fas fa-map-marker-alt"></i><span>г. Пенза, ул. Ростовская, 2А</span></div>
+                    <div class="contact-item"><i class="far fa-clock"></i><span>Пн-Пт 08:00–17:00</span></div>
+                    <div class="contact-item highlight"><i class="fas fa-phone"></i><span>+7 (8412) 12-34-56</span></div>
+                </div>
+            </div>
+            <nav class="nav">
+                <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                <ul class="nav-list" id="navList">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html" class="active">Каталог</a></li>
+                    <li><a href="about.html">О компании</a></li>
+                    <li><a href="production.html">Производство</a></li>
+                    <li><a href="delivery.html">Доставка</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="dealer.html" class="nav-cta">Стать дилером</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="catalog-page">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="index.html">Главная</a> / <span>Каталог продукции</span>
+            </div>
+            
+            <h1 class="page-title">Каталог кондитерских изделий</h1>
+            <p class="page-subtitle">Вся продукция собственного производства. Оптовые поставки по России и СНГ.</p>
+            
+            <!-- Фильтры каталога -->
+            <div class="catalog-filters">
+                <div class="filter-group">
+                    <h3>Категория</h3>
+                    <div class="filter-options">
+                        <button class="filter-btn active" data-filter="all">Все товары</button>
+                        <button class="filter-btn" data-filter="new">Новинки</button>
+                        <button class="filter-btn" data-filter="top">Лидеры продаж</button>
+                        <button class="filter-btn" data-filter="cookie">Сдобное печенье</button>
+                        <button class="filter-btn" data-filter="biscuit">Бисквитные изделия</button>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <h3>Сортировка</h3>
+                    <select class="sort-select">
+                        <option value="popular">По популярности</option>
+                        <option value="new">Сначала новинки</option>
+                        <option value="name">По названию (А-Я)</option>
+                        <option value="weight">По весу (возрастание)</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Сетка товаров каталога (все 16 товаров) -->
+            <div class="catalog-grid">
+                <!-- Все 16 товаров из главной страницы (скопировать структуру) -->
+                <!-- Каждый товар должен иметь data-атрибуты для фильтрации -->
+                <!-- Например: <article class="catalog-product" data-category="new top cookie"> -->
+                
+                <!-- Товар 1 -->
+                <article class="catalog-product" data-category="new top cookie">
+                    <div class="product-badges">
+                        <span class="badge badge-new">Новинка</span>
+                        <span class="badge badge-top">Лидер продаж</span>
+                    </div>
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/400x300/FFE4C4/000?text=Печенье+Ванилька" alt="Печенье сдобное «Ванилька»">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Печенье сдобное «Ванилька»</h3>
+                        <div class="product-specs">
+                            <div class="spec"><i class="fas fa-calendar-alt"></i><span>30 суток</span></div>
+                            <div class="spec"><i class="fas fa-weight-hanging"></i><span>5,00 кг</span></div>
+                            <div class="spec"><i class="fas fa-box"></i><span>В коробке: 4 уп.</span></div>
+                        </div>
+                        <p class="product-description">Сдобное печенье сердечки со вкусом ванили</p>
+                        <div class="product-actions">
+                            <button class="btn btn-primary btn-price">Запросить цену</button>
+                            <button class="btn btn-outline btn-sample">Заказать образец</button>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Остальные 15 товаров с такой же структурой -->
+                <!-- Добавить data-category для каждого -->
+                <!-- Например: data-category="top cookie" или data-category="new biscuit" -->
+                
+            </div>
+            
+            <!-- Пагинация -->
+            <div class="pagination">
+                <a href="#" class="page-nav disabled"><i class="fas fa-chevron-left"></i></a>
+                <a href="#" class="page-number active">1</a>
+                <a href="#" class="page-number">2</a>
+                <a href="#" class="page-dots">...</a>
+                <a href="#" class="page-number">5</a>
+                <a href="#" class="page-nav"><i class="fas fa-chevron-right"></i></a>
+            </div>
+            
+            <!-- КТА для заказа прайса -->
+            <div class="catalog-cta">
+                <div class="cta-content">
+                    <h2>Нужен полный прайс-лист?</h2>
+                    <p>Отправьте заявку и получите актуальные цены на всю продукцию с персональными условиями для вашего бизнеса.</p>
+                    <a href="contacts.html" class="btn btn-primary btn-large">Получить прайс-лист</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <div class="logo-text">
+                            <span class="logo-sweet">Сладости</span>
+                            <span class="logo-bakery">для радости</span>
+                        </div>
+                        <div class="logo-subtitle">«Сурский кондитер»</div>
+                    </div>
+                    <p class="footer-description">Производство и оптовая продажа кондитерских изделий. Качество и вкус с 2010 года.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-title">Контакты</h3>
+                    <ul class="footer-contacts">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>г. Пенза, ул. Ростовская, 2А</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+7 (8412) 12-34-56</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>sales@sursky-konditer.ru</span>
+                        </li>
+                        <li>
+                            <i class="far fa-clock"></i>
+                            <span>Пн-Пт: 08:00–17:00</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-title">Продукция</h3>
+                    <ul class="footer-links">
+                        <li><a href="catalog.html">Сдобное печенье</a></li>
+                        <li><a href="catalog.html">Бисквитные изделия</a></li>
+                        <li><a href="catalog.html">Вафельная продукция</a></li>
+                        <li><a href="catalog.html">Новинки</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-title">Компания</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="production.html">Наше производство</a></li>
+                        <li><a href="delivery.html">Доставка и оплата</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                        <li><a href="dealer.html">Дилерская программа</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2010–2023 «Сурский кондитер». Все права защищены.</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Пользовательское соглашение</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="js/catalog.js"></script>
+</body>
+</html>
