@@ -11,9 +11,9 @@ html {
 
 body {
     font-family: 'Open Sans', sans-serif;
-    color: #333;
+    color: #5c4b37; /* Тёплый коричневый вместо чёрного */
     line-height: 1.6;
-    background-color: #fff;
+    background-color: #fefcf8; /* Кремовый фон вместо белого */
     font-weight: 400;
 }
 
@@ -48,7 +48,7 @@ ul {
     padding: 12px 28px;
     font-weight: 600;
     font-size: 16px;
-    border-radius: 4px;
+    border-radius: 6px; /* Немного скруглил */
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -57,39 +57,39 @@ ul {
 }
 
 .btn-primary {
-    background-color: #e53935;
+    background-color: #d4a574; /* Тёплый бежевый как кофе с молоком */
     color: white;
-    border: 2px solid #e53935;
+    border: 2px solid #d4a574;
 }
 
 .btn-primary:hover {
-    background-color: #c62828;
-    border-color: #c62828;
+    background-color: #c8955c; /* Более тёмный бежевый */
+    border-color: #c8955c;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(229, 57, 53, 0.2);
+    box-shadow: 0 4px 12px rgba(212, 165, 116, 0.2);
 }
 
 .btn-secondary {
     background-color: transparent;
-    color: #e53935;
-    border: 2px solid #e53935;
+    color: #d4a574; /* Бежевый контур */
+    border: 2px solid #d4a574;
 }
 
 .btn-secondary:hover {
-    background-color: #e53935;
+    background-color: #d4a574;
     color: white;
     transform: translateY(-2px);
 }
 
 .btn-outline {
     background-color: transparent;
-    color: #333;
-    border: 2px solid #ddd;
+    color: #5c4b37; /* Тёплый коричневый */
+    border: 2px solid #e8d8c3; /* Светлый бежевый */
 }
 
 .btn-outline:hover {
-    border-color: #e53935;
-    color: #e53935;
+    border-color: #d4a574;
+    color: #d4a574;
 }
 
 .btn-large {
@@ -105,8 +105,8 @@ ul {
 
 /* ===== ШАПКА САЙТА ===== */
 .header {
-    background-color: white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    background-color: #fcf5ec; /* Очень светлый кремовый */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03); /* Более мягкая тень */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -121,8 +121,7 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f5eee5; /* Светлая разделительная линия */
 }
 
 /* Логотип */
@@ -142,7 +141,7 @@ ul {
     font-family: 'Montserrat', sans-serif;
     font-size: 24px;
     font-weight: 700;
-    color: #333;
+    color: #8b7355; /* Тёплый золотисто-коричневый */
     letter-spacing: -0.5px;
 }
 
@@ -150,15 +149,13 @@ ul {
     font-family: 'Montserrat', sans-serif;
     font-size: 24px;
     font-weight: 300;
-    color: #e53935;
+    color: #d4a574; /* Основной бежевый */
     margin-top: -5px;
 }
 
 .logo-subtitle {
-    font-size: 14px;
-    color: #666;
-    margin-top: 5px;
-    font-style: italic;
+height: 110px;
+width: 125px;
 }
 
 /* Контакты в шапке */
@@ -172,17 +169,17 @@ ul {
     align-items: center;
     gap: 8px;
     font-size: 14px;
-    color: #555;
+    color: #8b7355;
 }
 
 .contact-item i {
-    color: #e53935;
+    color: #d4a574;
     font-size: 16px;
 }
 
 .contact-item.highlight {
     font-weight: 700;
-    color: #333;
+    color: #5c4b37;
 }
 
 /* Навигация */
@@ -200,17 +197,17 @@ ul {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 16px;
-    color: #555;
+    color: #8b7355;
     padding: 5px 0;
     position: relative;
 }
 
 .nav-list a:hover {
-    color: #e53935;
+    color: #d4a574;
 }
 
 .nav-list a.active {
-    color: #e53935;
+    color: #d4a574;
     font-weight: 600;
 }
 
@@ -221,19 +218,19 @@ ul {
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #e53935;
+    background-color: #d4a574;
 }
 
 .nav-cta {
-    background-color: #e53935;
+    background-color: #d4a574;
     color: white !important;
     padding: 8px 20px !important;
-    border-radius: 4px;
+    border-radius: 6px;
     margin-left: 10px;
 }
 
 .nav-cta:hover {
-    background-color: #c62828;
+    background-color: #c8955c;
 }
 
 .menu-toggle {
@@ -241,14 +238,14 @@ ul {
     background: none;
     border: none;
     font-size: 24px;
-    color: #333;
+    color: #8b7355;
     cursor: pointer;
     padding: 5px;
 }
 
 /* ===== ГЕРОЙ-СЕКЦИЯ ===== */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+    background: linear-gradient(rgba(92, 75, 55, 0.7), rgba(92, 75, 55, 0.7)), 
                 url('https://images.unsplash.com/photo-1586985288623-e2a8f759b6aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
     background-size: cover;
     background-position: center;
@@ -279,7 +276,7 @@ ul {
 .hero-sub {
     font-size: 32px;
     font-weight: 300;
-    color: #ffccbc;
+    color: #f0e6d6; /* Светлый кремовый */
 }
 
 .hero-description {
@@ -301,7 +298,7 @@ ul {
 /* ===== СЕКЦИЯ С ТОВАРАМИ ===== */
 .products-section {
     padding: 80px 0;
-    background-color: #f9f9f9;
+    background-color: #f9f5f0; /* Тёплый кремовый фон */
 }
 
 .section-header {
@@ -313,13 +310,13 @@ ul {
     font-family: 'Montserrat', sans-serif;
     font-size: 36px;
     font-weight: 700;
-    color: #333;
+    color: #5c4b37;
     margin-bottom: 15px;
 }
 
 .section-subtitle {
     font-size: 18px;
-    color: #666;
+    color: #8b7355;
     max-width: 600px;
     margin: 0 auto;
 }
@@ -334,24 +331,25 @@ ul {
 
 .product-card {
     background-color: white;
-    border-radius: 8px;
+    border-radius: 10px; /* Больше скругление */
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
     height: 100%;
+    border: 1px solid #f0e6d6; /* Тонкая бежевая рамка */
 }
 
 .product-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
 }
 
 /* Бейджи */
 .product-badges {
     position: absolute;
-    top: 15px;
+    top: 35px;
     left: 15px;
     display: flex;
     flex-direction: column;
@@ -363,18 +361,18 @@ ul {
     padding: 5px 12px;
     font-size: 12px;
     font-weight: 700;
-    border-radius: 3px;
+    border-radius: 4px;
     color: white;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
 .badge-new {
-    background-color: #4caf50;
+    background-color: #a8c6a8; /* Мягкий зелёный для "новинка" */
 }
 
 .badge-top {
-    background-color: #ff9800;
+    background-color: #e6b17e; /* Бежево-оранжевый для "лидер" */
 }
 
 /* Изображение товара */
@@ -382,11 +380,14 @@ ul {
     position: relative;
     height: 220px;
     overflow: hidden;
+    background-color: #f9f5f0; /* Фон если фото не загрузилось */
 }
 
 .product-image img {
     width: 100%;
     height: 100%;
+    text-align: center;
+    margin-top:7px;
     object-fit: cover;
     transition: transform 0.5s ease;
 }
@@ -407,7 +408,7 @@ ul {
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     font-weight: 600;
-    color: #333;
+    color: #5c4b37;
     margin-bottom: 15px;
     line-height: 1.3;
     flex-grow: 0;
@@ -416,6 +417,9 @@ ul {
 .product-specs {
     margin-bottom: 15px;
     flex-grow: 0;
+    background-color: #f9f5f0; /* Лёгкий фон для спецификаций */
+    padding: 12px;
+    border-radius: 6px;
 }
 
 .spec {
@@ -423,23 +427,23 @@ ul {
     align-items: center;
     gap: 8px;
     font-size: 14px;
-    color: #666;
+    color: #8b7355;
     margin-bottom: 8px;
 }
 
 .spec i {
-    color: #e53935;
+    color: #d4a574;
     width: 16px;
 }
 
 .spec strong {
-    color: #333;
+    color: #5c4b37;
     font-weight: 600;
 }
 
 .product-description {
     font-size: 15px;
-    color: #555;
+    color: #8b7355;
     line-height: 1.5;
     margin-top: auto;
     flex-grow: 1;
@@ -452,7 +456,7 @@ ul {
 /* ===== ИНФОРМАЦИОННАЯ СЕКЦИЯ ===== */
 .info-section {
     padding: 80px 0;
-    background-color: #f5f5f5;
+    background-color: #f5eee5; /* Ещё более тёплый кремовый */
     text-align: center;
 }
 
@@ -465,13 +469,13 @@ ul {
     font-family: 'Montserrat', sans-serif;
     font-size: 32px;
     font-weight: 700;
-    color: #333;
+    color: #5c4b37;
     margin-bottom: 25px;
 }
 
 .info-text {
     font-size: 18px;
-    color: #555;
+    color: #8b7355;
     margin-bottom: 35px;
     line-height: 1.6;
 }
@@ -489,8 +493,8 @@ ul {
 
 /* ===== ПОДВАЛ ===== */
 .footer {
-    background-color: #333;
-    color: #bbb;
+    background-color: #5c4b37; /* Тёмный коричневый вместо чёрного */
+    color: #e8d8c3; /* Светлый кремовый текст */
     padding: 60px 0 30px;
 }
 
@@ -515,31 +519,31 @@ ul {
 }
 
 .footer-logo .logo-sweet {
-    color: #fff;
+    color: #f0e6d6;
     font-size: 22px;
 }
 
 .footer-logo .logo-bakery {
-    color: #ffccbc;
+    color: #e6b17e;
     font-size: 22px;
 }
 
 .footer-logo .logo-subtitle {
-    color: #aaa;
+    color: #d4a574;
     font-size: 13px;
 }
 
 .footer-description {
     font-size: 14px;
     line-height: 1.5;
-    color: #999;
+    color: #d4a574;
 }
 
 .footer-title {
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     font-weight: 600;
-    color: #fff;
+    color: #f0e6d6;
     margin-bottom: 20px;
 }
 
@@ -551,7 +555,7 @@ ul {
 }
 
 .footer-contacts i {
-    color: #e53935;
+    color: #e6b17e;
     margin-right: 10px;
     margin-top: 3px;
     width: 16px;
@@ -563,16 +567,16 @@ ul {
 
 .footer-links a {
     font-size: 14px;
-    color: #bbb;
+    color: #d4a574;
 }
 
 .footer-links a:hover {
-    color: #fff;
+    color: #f0e6d6;
     padding-left: 5px;
 }
 
 .footer-bottom {
-    border-top: 1px solid #444;
+    border-top: 1px solid #8b7355;
     padding-top: 30px;
     display: flex;
     justify-content: space-between;
@@ -582,7 +586,7 @@ ul {
 
 .footer-copyright {
     font-size: 14px;
-    color: #999;
+    color: #d4a574;
 }
 
 .footer-legal {
@@ -592,11 +596,11 @@ ul {
 
 .footer-legal a {
     font-size: 14px;
-    color: #999;
+    color: #d4a574;
 }
 
 .footer-legal a:hover {
-    color: #fff;
+    color: #f0e6d6;
 }
 
 /* ===== АДАПТИВНОСТЬ ===== */
@@ -642,8 +646,8 @@ ul {
         top: 100%;
         left: 0;
         width: 100%;
-        background: white;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        background: #fffaf3;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.05);
         padding: 20px;
         z-index: 1000;
     }
@@ -659,7 +663,7 @@ ul {
     .nav-list a {
         display: block;
         padding: 12px 0;
-        border-bottom: 1px solid #f0f0f0;
+        border-bottom: 1px solid #f5eee5;
     }
     
     .nav-list a:last-child {
