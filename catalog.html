@@ -16,11 +16,7 @@
             <div class="header-top">
                 <div class="logo">
                     <a href="index.html">
-                        <div class="logo-text">
-                            <span class="logo-sweet">Сладости</span>
-                            <span class="logo-bakery">для радости</span>
-                        </div>
-                        <div class="logo-subtitle">«Сурский кондитер»</div>
+                        <div><img class="logo-subtitle" src="images/logo.jpeg"></div>
                     </a>
                 </div>
                 <div class="header-contacts">
@@ -43,6 +39,7 @@
             </nav>
         </div>
     </header>
+    
 
     <main class="catalog-page">
         <div class="container">
@@ -76,52 +73,469 @@
                     </select>
                 </div>
             </div>
-            
-            <!-- Сетка товаров каталога (все 16 товаров) -->
-            <div class="catalog-grid">
-                <!-- Все 16 товаров из главной страницы (скопировать структуру) -->
-                <!-- Каждый товар должен иметь data-атрибуты для фильтрации -->
-                <!-- Например: <article class="catalog-product" data-category="new top cookie"> -->
-                
-                <!-- Товар 1 -->
-                <article class="catalog-product" data-category="new top cookie">
-                    <div class="product-badges">
-                        <span class="badge badge-new">Новинка</span>
-                        <span class="badge badge-top">Лидер продаж</span>
-                    </div>
-                    <div class="product-image">
-                        <img src="https://via.placeholder.com/400x300/FFE4C4/000?text=Печенье+Ванилька" alt="Печенье сдобное «Ванилька»">
-                    </div>
-                    <div class="product-content">
-                        <h3 class="product-title">Печенье сдобное «Ванилька»</h3>
-                        <div class="product-specs">
-                            <div class="spec"><i class="fas fa-calendar-alt"></i><span>30 суток</span></div>
-                            <div class="spec"><i class="fas fa-weight-hanging"></i><span>5,00 кг</span></div>
-                            <div class="spec"><i class="fas fa-box"></i><span>В коробке: 4 уп.</span></div>
-                        </div>
-                        <p class="product-description">Сдобное печенье сердечки со вкусом ванили</p>
-                        <div class="product-actions">
-                            <button class="btn btn-primary btn-price">Запросить цену</button>
-                            <button class="btn btn-outline btn-sample">Заказать образец</button>
-                        </div>
-                    </div>
-                </article>
-                
-                <!-- Остальные 15 товаров с такой же структурой -->
-                <!-- Добавить data-category для каждого -->
-                <!-- Например: data-category="top cookie" или data-category="new biscuit" -->
-                
+
+<div class="catalog-grid" id="productGrid">
+    <!-- Страница 1 (товары 1-9) -->
+    
+    <!-- 1. Печенье сдобное «Ванилька» -->
+    <article class="catalog-product" data-page="1" data-category="new top cookie" data-weight="heavy" data-shelf="medium">
+        <div class="product-badges">
+            <span class="badge badge-new">Новинка</span>
+            <span class="badge badge-top">Лидер</span>
+        </div>
+        <div class="product-image">
+            <img src="https://via.placeholder.com/400x300/FFE4C4/000?text=Печенье+Ванилька" alt="Печенье сдобное «Ванилька»">
+        </div>
+        <div class="product-content">
+            <h3 class="product-title">Печенье сдобное «Ванилька»</h3>
+            <div class="product-specs">
+                <div class="spec"><i class="fas fa-calendar-alt"></i><span>Срок годности: <strong>30 суток</strong></span></div>
+                <div class="spec"><i class="fas fa-weight-hanging"></i><span>Вес упаковки: <strong>5,00 кг</strong></span></div>
             </div>
+            <p class="product-description">Сдобное печенье сердечки со вкусом ванили</p>
+        </div>
+    </article>
+    
+    <!-- 2. Печенье сдобное «Талисман» -->
+    <article class="catalog-product" data-page="1" data-category="top cookie" data-weight="heavy" data-shelf="long">
+        <div class="product-badges"><span class="badge badge-top">Лидер</span></div>
+        <div class="product-image">
+            <img src="https://via.placeholder.com/400x300/F0E68C/000?text=Печенье+Талисман" alt="Печенье сдобное «Талисман»">
+        </div>
+        <div class="product-content">
+            <h3 class="product-title">Печенье сдобное «Талисман»</h3>
+            <div class="product-specs">
+                <div class="spec"><i class="fas fa-calendar-alt"></i><span>Срок годности: <strong>60 суток</strong></span></div>
+                <div class="spec"><i class="fas fa-weight-hanging"></i><span>Вес упаковки: <strong>5,00 кг</strong></span></div>
+            </div>
+            <p class="product-description">Печенье в виде орешка с вареным сгущенным молоком</p>
+        </div>
+    </article>
+    
+    <!-- 3. Печенье сдобное «Бабушкино» со вкусом сгущенного молока -->
+    <article class="catalog-product" data-page="1" data-category="top biscuit" data-weight="medium" data-shelf="short">
+        <div class="product-badges"><span class="badge badge-top">Лидер</span></div>
+        <div class="product-image">
+            <img src="https://via.placeholder.com/400x300/FFB6C1/000?text=Бабушкино+сгущенка" alt="Печенье «Бабушкино» сгущенка">
+        </div>
+        <div class="product-content">
+            <h3 class="product-title">Печенье сдобное «Бабушкино» со вкусом сгущенного молока</h3>
+            <div class="product-specs">
+                <div class="spec"><i class="fas fa-calendar-alt"></i><span>Срок годности: <strong>21 сутки</strong></span></div>
+                <div class="spec"><i class="fas fa-weight-hanging"></i><span>Вес упаковки: <strong>1,70 кг</strong></span></div>
+            </div>
+            <p class="product-description">Сдобное бисквитное печенье в виде бочонка с начинкой сгущенное молоко</p>
+        </div>
+    </article>
+    
+    <!-- 4. Печенье сдобное «Бабушкино» со вкусом йогурта -->
+    <article class="catalog-product" data-page="1" data-category="top biscuit" data-weight="medium" data-shelf="short">
+        <div class="product-badges"><span class="badge badge-top">Лидер</span></div>
+        <div class="product-image">
+            <img src="https://via.placeholder.com/400x300/E6E6FA/000?text=Бабушкино+йогурт" alt="Печенье «Бабушкино» йогурт">
+        </div>
+        <div class="product-content">
+            <h3 class="product-title">Печенье сдобное «Бабушкино» со вкусом йогурта</h3>
+            <div class="product-specs">
+                <div class="spec"><i class="fas fa-calendar-alt"></i><span>Срок годности: <strong>21 сутки</strong></span></div>
+                <div class="spec"><i class="fas fa-weight-hanging"></i><span>Вес упаковки: <strong>1,70 кг</strong></span></div>
+            </div>
+            <p class="product-description">Сдобное бисквитное печенье в виде бочонка с начинкой йогурт</p>
+        </div>
+    </article>
+    
+    <!-- 5. Печенье сдобное «Ажур» -->
+    <article class="catalog-product" data-page="1" data-category="top cookie" data-weight="medium" data-shelf="medium">
+        <div class="product-badges"><span class="badge badge-top">Лидер</span></div>
+        <div class="product-image">
+            <img src="https://via.placeholder.com/400x300/98FB98/000?text=Печенье+Ажур" alt="Печенье сдобное «Ажур»">
+        </div>
+        <div class="product-content">
+            <h3 class="product-title">Печенье сдобное «Ажур»</h3>
+            <div class="product-specs">
+                <div class="spec"><i class="fas fa-calendar-alt"></i><span>Срок годности: <strong>30 суток</strong></span></div>
+                <div class="spec"><i class="fas fa-weight-hanging"></i><span>Вес упаковки: <strong>2,00 кг</strong></span></div>
+            </div>
+            <p class="product-description">Сдобное печенье в виде снежинки, со вкусом пломбира</p>
+        </div>
+    </article>
+    
+    <!-- 6. Печенье сдобное «Соблазн» -->
+    <article class="catalog-product" data-page="1" data-category="new wafer" data-weight="light" data-shelf="long">
+        <div class="product-badges"><span class="badge badge-new">Новинка</span></div>
+        <div class="product-image">
+            <img src="https://via.placeholder.com/400x300/FFDAB9/000?text=Печенье+Соблазн" alt="Печенье сдобное «Соблазн»">
+        </div>
+        <div class="product-content">
+            <h3 class="product-title">Печенье сдобное «Соблазн»</h3>
+            <div class="product-specs">
+                <div class="spec"><i class="fas fa-calendar-alt"></i><span>Срок годности: <strong>60 суток</strong></span></div>
+                <div class="spec"><i class="fas fa-weight-hanging"></i><span>Вес упаковки: <strong>0,80 кг</strong></span></div>
+            </div>
+            <p class="product-description">Хрустящая вафельная трубочка (мини) без начинки</p>
+        </div>
+    </article>
+    
+    <!-- 7. Печенье сдобное «Кексик» со вкусом вишни -->
+    <article class="catalog-product" data-page="1" data-category="top biscuit" data-weight="light" data-shelf="medium">
+        <div class="product-badges"><span class="badge badge-top">Лидер</span></div>
+        <div class="product-image">
+            <img src="https://via.placeholder.com/400x300/FFC0CB/000?text=Кексик+вишня" alt="Печенье «Кексик» вишня">
+        </div>
+        <div class="product-content">
+            <h3 class="product-title">Печенье сдобное «Кексик» со вкусом вишни</h3>
+            <div class="product-specs">
+                <div class="spec"><i class="fas fa-calendar-alt"></i><span>Срок годности: <strong>30 суток</strong></span></div>
+                <div class="spec"><i class="fas fa-weight-hanging"></i><span>Вес упаковки: <strong>1,00 кг</strong></span></div>
+            </div>
+            <p class="product-description">Сдобное мягкое печенье в виде кекса с начинкой вишня</p>
+        </div>
+    </article>
+    
+    <!-- 8. Печенье сдобное «Кексик» со вкусом лимона -->
+    <article class="catalog-product" data-page="1" data-category="top biscuit" data-weight="light" data-shelf="medium">
+        <div class="product-badges"><span class="badge badge-top">Лидер</span></div>
+        <div class="product-image">
+            <img src="https://via.placeholder.com/400x300/FFFACD/000?text=Кексик+лимон" alt="Печенье «Кексик» лимон">
+        </div>
+        <div class="product-content">
+            <h3 class="product-title">Печенье сдобное «Кексик» со вкусом лимона</h3>
+            <div class="product-specs">
+                <div class="spec"><i class="fas fa-calendar-alt"></i><span>Срок годности: <strong>30 суток</strong></span></div>
+                <div class="spec"><i class="fas fa-weight-hanging"></i><span>Вес упаковки: <strong>1,00 кг</strong></span></div>
+            </div>
+            <p class="product-description">Сдобное мягкое печенье в виде кекса с начинкой лимон</p>
+        </div>
+    </article>
+    
+    <!-- 9. Печенье сдобное «Милана» -->
+    <article class="catalog-product" data-page="1" data-category="top cookie" data-weight="medium" data-shelf="medium">
+        <div class="product-badges"><span class="badge badge-top">Лидер</span></div>
+        <div class="product-image">
+            <img src="https://via.placeholder.com/400x300/FFB6C1/000?text=Печенье+Милана" alt="Печенье сдобное «Милана»">
+        </div>
+        <div class="product-content">
+            <h3 class="product-title">Печенье сдобное «Милана»</h3>
+            <div class="product-specs">
+                <div class="spec"><i class="fas fa-calendar-alt"></i><span>Срок годности: <strong>30 суток</strong></span></div>
+                <div class="spec"><i class="fas fa-weight-hanging"></i><span>Вес упаковки: <strong>2,00 кг</strong></span></div>
+            </div>
+            <p class="product-description">Сдобное печенье (сердечки мини) с абрикосовым джемом</p>
+        </div>
+    </article>
+    
+    <!-- Страница 2 (товары 10-18) -->
+    
+    <!-- 10. Печенье сдобное «Мгновение» -->
+    <article class="catalog-product" data-page="2" data-category="new top cookie" data-weight="medium" data-shelf="medium">
+        <div class="product-badges">
+            <span class="badge badge-new">Новинка</span>
+            <span class="badge badge-top">Лидер</span>
+        </div>
+        <div class="product-image">
+            <img src="https://via.placeholder.com/400x300/F0E68C/000?text=Печенье+Мгновение" alt="Печенье сдобное «Мгновение»">
+        </div>
+        <div class="product-content">
+            <h3 class="product-title">Печенье сдобное «Мгновение»</h3>
+            <div class="product-specs">
+                <div class="spec"><i class="fas fa-calendar-alt"></i><span>Срок годности: <strong>30 суток</strong></span></div>
+                <div class="spec"><i class="fas fa-weight-hanging"></i><span>Вес упаковки: <strong>1,50 кг</strong></span></div>
+            </div>
+            <p class="product-description">Песочный конвертик с начинкой йогурт + изюм, с посыпкой корица</p>
+        </div>
+    </article>
+    
+    <!-- 11. Печенье сдобное «Доброшка» со вкусом шоколада -->
+    <article class="catalog-product" data-page="2" data-category="top cookie" data-weight="light" data-shelf="medium">
+        <div class="product-badges"><span class="badge badge-top">Лидер</span></div>
+        <div class="product-image">
+            <img src="https://via.placeholder.com/400x300/8B4513/fff?text=Доброшка+шоколад" alt="Печенье «Доброшка» шоколад">
+        </div>
+        <div class="product-content">
+            <h3 class="product-title">Печенье сдобное «Доброшка» со вкусом шоколада</h3>
+            <div class="product-specs">
+                <div class="spec"><i class="fas fa-calendar-alt"></i><span>Срок годности: <strong>30 суток</strong></span></div>
+                <div class="spec"><i class="fas fa-weight-hanging"></i><span>Вес упаковки: <strong>1,20 кг</strong></span></div>
+            </div>
+            <p class="product-description">Сдобное печенье в виде шарика с шоколадной начинкой</p>
+        </div>
+    </article>
+    
+    <!-- 12. Печенье сдобное «Неженка» -->
+    <article class="catalog-product" data-page="2" data-category="top cookie" data-weight="light" data-shelf="long">
+        <div class="product-badges"><span class="badge badge-top">Лидер</span></div>
+        <div class="product-image">
+            <img src="https://via.placeholder.com/400x300/FFE4E1/000?text=Печенье+Неженка" alt="Печенье сдобное «Неженка»">
+        </div>
+        <div class="product-content">
+            <h3 class="product-title">Печенье сдобное «Неженка»</h3>
+            <div class="product-specs">
+                <div class="spec"><i class="fas fa-calendar-alt"></i><span>Срок годности: <strong>60 суток</strong></span></div>
+                <div class="spec"><i class="fas fa-weight-hanging"></i><span>Вес упаковки: <strong>1,00 кг</strong></span></div>
+            </div>
+            <p class="product-description">Сдобное печенье очень нежное и хрустящее</p>
+        </div>
+    </article>
+    
+    <!-- 13. Печенье сдобное «Доброшка» со вкусом йогурта -->
+    <article class="catalog-product" data-page="2" data-category="top cookie" data-weight="light" data-shelf="medium">
+        <div class="product-badges"><span class="badge badge-top">Лидер</span></div>
+        <div class="product-image">
+            <img src="https://via.placeholder.com/400x300/F0FFF0/000?text=Доброшка+йогурт" alt="Печенье «Доброшка» йогурт">
+        </div>
+        <div class="product-content">
+            <h3 class="product-title">Печенье сдобное «Доброшка» со вкусом йогурта</h3>
+            <div class="product-specs">
+                <div class="spec"><i class="fas fa-calendar-alt"></i><span>Срок годности: <strong>30 суток</strong></span></div>
+                <div class="spec"><i class="fas fa-weight-hanging"></i><span>Вес упаковки: <strong>1,20 кг</strong></span></div>
+            </div>
+            <p class="product-description">Сдобное печенье в виде шарика с йогуртовой начинкой</p>
+        </div>
+    </article>
+    
+    <!-- 14. Печенье сдобное «Вкусняшка» -->
+    <article class="catalog-product" data-page="2" data-category="new cookie" data-weight="medium" data-shelf="medium">
+        <div class="product-badges"><span class="badge badge-new">Новинка</span></div>
+        <div class="product-image">
+            <img src="https://via.placeholder.com/400x300/FFEC8B/000?text=Печенье+Вкусняшка" alt="Печенье сдобное «Вкусняшка»">
+        </div>
+        <div class="product-content">
+            <h3 class="product-title">Печенье сдобное «Вкусняшка»</h3>
+            <div class="product-specs">
+                <div class="spec"><i class="fas fa-calendar-alt"></i><span>Срок годности: <strong>30 суток</strong></span></div>
+                <div class="spec"><i class="fas fa-weight-hanging"></i><span>Вес упаковки: <strong>1,50 кг</strong></span></div>
+            </div>
+            <p class="product-description">Печенье песочно-дрожжевое с начинкой груша</p>
+        </div>
+    </article>
+    
+    <!-- 15. Печенье сдобное «Ривьера» -->
+    <article class="catalog-product" data-page="2" data-category="new top biscuit" data-weight="light" data-shelf="medium">
+        <div class="product-badges">
+            <span class="badge badge-new">Новинка</span>
+            <span class="badge badge-top">Лидер</span>
+        </div>
+        <div class="product-image">
+            <img src="https://via.placeholder.com/400x300/E0FFFF/000?text=Печенье+Ривьера" alt="Печенье сдобное «Ривьера»">
+        </div>
+        <div class="product-content">
+            <h3 class="product-title">Печенье сдобное «Ривьера»</h3>
+            <div class="product-specs">
+                <div class="spec"><i class="fas fa-calendar-alt"></i><span>Срок годности: <strong>30 суток</strong></span></div>
+                <div class="spec"><i class="fas fa-weight-hanging"></i><span>Вес упаковки: <strong>1,10 кг</strong></span></div>
+            </div>
+            <p class="product-description">Бисквитный пирог с изюмом, с декором йогурт + шоколад</p>
+        </div>
+    </article>
+    
+    <!-- 16. Печенье «Юбилейное» традиционное -->
+    <article class="catalog-product" data-page="2" data-category="top cookie" data-weight="heavy" data-shelf="long">
+        <div class="product-badges"><span class="badge badge-top">Лидер</span></div>
+        <div class="product-image">
+            <img src="https://via.placeholder.com/400x300/FFDAB9/000?text=Юбилейное" alt="Печенье «Юбилейное»">
+        </div>
+        <div class="product-content">
+            <h3 class="product-title">Печенье «Юбилейное» традиционное</h3>
+            <div class="product-specs">
+                <div class="spec"><i class="fas fa-calendar-alt"></i><span>Срок годности: <strong>90 суток</strong></span></div>
+                <div class="spec"><i class="fas fa-weight-hanging"></i><span>Вес упаковки: <strong>4,50 кг</strong></span></div>
+            </div>
+            <p class="product-description">Классическое печенье с какао, знакомое с детства</p>
+        </div>
+    </article>
+    
+    <!-- 17. Пряники «Тульские» -->
+    <article class="catalog-product" data-page="2" data-category="cookie" data-weight="medium" data-shelf="long">
+        <div class="product-image">
+            <img src="https://via.placeholder.com/400x300/D2B48C/000?text=Пряники+Тульские" alt="Пряники «Тульские»">
+        </div>
+        <div class="product-content">
+            <h3 class="product-title">Пряники «Тульские» с вареньем</h3>
+            <div class="product-specs">
+                <div class="spec"><i class="fas fa-calendar-alt"></i><span>Срок годности: <strong>45 суток</strong></span></div>
+                <div class="spec"><i class="fas fa-weight-hanging"></i><span>Вес упаковки: <strong>2,20 кг</strong></span></div>
+            </div>
+            <p class="product-description">Мягкие пряники с ягодным вареньем, глазированные</p>
+        </div>
+    </article>
+    
+    <!-- 18. Сухарики «Хрустящие» -->
+    <article class="catalog-product" data-page="2" data-category="cookie" data-weight="light" data-shelf="long">
+        <div class="product-image">
+            <img src="https://via.placeholder.com/400x300/F5F5DC/000?text=Сухарики" alt="Сухарики «Хрустящие»">
+        </div>
+        <div class="product-content">
+            <h3 class="product-title">Сухарики «Хрустящие» с чесноком</h3>
+            <div class="product-specs">
+                <div class="spec"><i class="fas fa-calendar-alt"></i><span>Срок годности: <strong>60 суток</strong></span></div>
+                <div class="spec"><i class="fas fa-weight-hanging"></i><span>Вес упаковки: <strong>0,95 кг</strong></span></div>
+            </div>
+            <p class="product-description">Хрустящие сухарики со вкусом чеснока и зелени</p>
+        </div>
+    </article>
+    
+    <!-- Страница 3 (товары 19-27) -->
+    
+    <!-- 19. Печенье «Овсяное» с изюмом -->
+    <article class="catalog-product" data-page="3" data-category="cookie" data-weight="medium" data-shelf="medium">
+        <div class="product-image">
+            <img src="https://via.placeholder.com/400x300/FFE4B5/000?text=Овсяное+с+изюмом" alt="Печенье «Овсяное»">
+        </div>
+        <div class="product-content">
+            <h3 class="product-title">Печенье «Овсяное» с изюмом</h3>
+            <div class="product-specs">
+                <div class="spec"><i class="fas fa-calendar-alt"></i><span>Срок годности: <strong>35 суток</strong></span></div>
+                <div class="spec"><i class="fas fa-weight-hanging"></i><span>Вес упаковки: <strong>1,80 кг</strong></span></div>
+            </div>
+            <p class="product-description">Полезное овсяное печенье с изюмом и орехами</p>
+        </div>
+    </article>
+    
+    <!-- 20. Печенье «Сахарное» -->
+    <article class="catalog-product" data-page="3" data-category="top cookie" data-weight="heavy" data-shelf="long">
+        <div class="product-badges"><span class="badge badge-top">Лидер</span></div>
+        <div class="product-image">
+            <img src="https://via.placeholder.com/400x300/FFFFFF/000?text=Сахарное" alt="Печенье «Сахарное»">
+        </div>
+        <div class="product-content">
+            <h3 class="product-title">Печенье «Сахарное»</h3>
+            <div class="product-specs">
+                <div class="spec"><i class="fas fa-calendar-alt"></i><span>Срок годности: <strong>75 суток</strong></span></div>
+                <div class="spec"><i class="fas fa-weight-hanging"></i><span>Вес упаковки: <strong>5,50 кг</strong></span></div>
+            </div>
+            <p class="product-description">Хрустящее сахарное печенье для чаепития</p>
+        </div>
+    </article>
+    
+    <!-- 21. Печенье «Затяжное» -->
+    <article class="catalog-product" data-page="3" data-category="cookie" data-weight="light" data-shelf="long">
+        <div class="product-image">
+            <img src="https://via.placeholder.com/400x300/F0E68C/000?text=Затяжное" alt="Печенье «Затяжное»">
+        </div>
+        <div class="product-content">
+            <h3 class="product-title">Печенье «Затяжное» ванильное</h3>
+            <div class="product-specs">
+                <div class="spec"><i class="fas fa-calendar-alt"></i><span>Срок годности: <strong>50 суток</strong></span></div>
+                <div class="spec"><i class="fas fa-weight-hanging"></i><span>Вес упаковки: <strong>1,10 кг</strong></span></div>
+            </div>
+            <p class="product-description">Тонкое затяжное печенье с нежным ванильным вкусом</p>
+        </div>
+    </article>
+    
+    <!-- 22. Печенье «Кокосовое» -->
+    <article class="catalog-product" data-page="3" data-category="new cookie" data-weight="medium" data-shelf="medium">
+        <div class="product-badges"><span class="badge badge-new">Новинка</span></div>
+        <div class="product-image">
+            <img src="https://via.placeholder.com/400x300/FFF8DC/000?text=Кокосовое" alt="Печенье «Кокосовое»">
+        </div>
+        <div class="product-content">
+            <h3 class="product-title">Печенье «Кокосовое» с белым шоколадом</h3>
+            <div class="product-specs">
+                <div class="spec"><i class="fas fa-calendar-alt"></i><span>Срок годности: <strong>40 суток</strong></span></div>
+                <div class="spec"><i class="fas fa-weight-hanging"></i><span>Вес упаковки: <strong>1,65 кг</strong></span></div>
+            </div>
+            <p class="product-description">Печенье с кокосовой стружкой и кусочками белого шоколада</p>
+        </div>
+    </article>
+    
+    <!-- 23. Печенье «Шоколадное» с орехами -->
+    <article class="catalog-product" data-page="3" data-category="top cookie" data-weight="medium" data-shelf="medium">
+        <div class="product-badges"><span class="badge badge-top">Лидер</span></div>
+        <div class="product-image">
+            <img src="https://via.placeholder.com/400x300/8B4513/fff?text=Шоколадное+орехи" alt="Печенье «Шоколадное»">
+        </div>
+        <div class="product-content">
+            <h3 class="product-title">Печенье «Шоколадное» с грецкими орехами</h3>
+            <div class="product-specs">
+                <div class="spec"><i class="fas fa-calendar-alt"></i><span>Срок годности: <strong>30 суток</strong></span></div>
+                <div class="spec"><i class="fas fa-weight-hanging"></i><span>Вес упаковки: <strong>1,95 кг</strong></span></div>
+            </div>
+            <p class="product-description">Шоколадное печенье с кусочками грецких орехов</p>
+        </div>
+    </article>
+    
+    <!-- 24. Печенье «Имбирное» -->
+    <article class="catalog-product" data-page="3" data-category="seasonal cookie" data-weight="light" data-shelf="long">
+        <div class="product-badges"><span class="badge badge-seasonal">Сезонное</span></div>
+        <div class="product-image">
+            <img src="https://via.placeholder.com/400x300/FFA07A/000?text=Имбирное" alt="Печенье «Имбирное»">
+        </div>
+        <div class="product-content">
+            <h3 class="product-title">Печенье «Имбирное» с глазурью</h3>
+            <div class="product-specs">
+                <div class="spec"><i class="fas fa-calendar-alt"></i><span>Срок годности: <strong>55 суток</strong></span></div>
+                <div class="spec"><i class="fas fa-weight-hanging"></i><span>Вес упаковки: <strong>1,25 кг</strong></span></div>
+            </div>
+            <p class="product-description">Ароматное имбирное печенье с сахарной глазурью</p>
+        </div>
+    </article>
+    
+    <!-- 25. Печенье «Слоёное» -->
+    <article class="catalog-product" data-page="3" data-category="new cookie" data-weight="medium" data-shelf="short">
+        <div class="product-badges"><span class="badge badge-new">Новинка</span></div>
+        <div class="product-image">
+            <img src="https://via.placeholder.com/400x300/F5F5F5/000?text=Слоёное" alt="Печенье «Слоёное»">
+        </div>
+        <div class="product-content">
+            <h3 class="product-title">Печенье «Слоёное» со сливочным кремом</h3>
+            <div class="product-specs">
+                <div class="spec"><i class="fas fa-calendar-alt"></i><span>Срок годности: <strong>25 суток</strong></span></div>
+                <div class="spec"><i class="fas fa-weight-hanging"></i><span>Вес упаковки: <strong>1,40 кг</strong></span></div>
+            </div>
+            <p class="product-description">Нежное слоёное печенье с воздушным сливочным кремом</p>
+        </div>
+    </article>
+    
+    <!-- 26. Печенье «Миндальное» -->
+    <article class="catalog-product" data-page="3" data-category="cookie" data-weight="light" data-shelf="medium">
+        <div class="product-image">
+            <img src="https://via.placeholder.com/400x300/FFEBCD/000?text=Миндальное" alt="Печенье «Миндальное»">
+        </div>
+        <div class="product-content">
+            <h3 class="product-title">Печенье «Миндальное»</h3>
+            <div class="product-specs">
+                <div class="spec"><i class="fas fa-calendar-alt"></i><span>Срок годности: <strong>45 суток</strong></span></div>
+                <div class="spec"><i class="fas fa-weight-hanging"></i><span>Вес упаковки: <strong>0,85 кг</strong></span></div>
+            </div>
+            <p class="product-description">Хрустящее печенье с миндальной крошкой и ванилью</p>
+        </div>
+    </article>
+    
+    <!-- 27. Печенье «Фруктовое» ассорти -->
+    <article class="catalog-product" data-page="3" data-category="new cookie" data-weight="heavy" data-shelf="medium">
+        <div class="product-badges"><span class="badge badge-new">Новинка</span></div>
+        <div class="product-image">
+            <img src="https://via.placeholder.com/400x300/FFB6C1/000?text=Фруктовое+ассорти" alt="Печенье «Фруктовое»">
+        </div>
+        <div class="product-content">
+            <h3 class="product-title">Печенье «Фруктовое» ассорти</h3>
+            <div class="product-specs">
+                <div class="spec"><i class="fas fa-calendar-alt"></i><span>Срок годности: <strong>35 суток</strong></span></div>
+                <div class="spec"><i class="fas fa-weight-hanging"></i><span>Вес упаковки: <strong>3,20 кг</strong></span></div>
+            </div>
+            <p class="product-description">Набор печенья с разными фруктовыми начинками: яблоко, вишня, абрикос</p>
+        </div>
+    </article>
+</div>
             
             <!-- Пагинация -->
             <div class="pagination">
-                <a href="#" class="page-nav disabled"><i class="fas fa-chevron-left"></i></a>
-                <a href="#" class="page-number active">1</a>
-                <a href="#" class="page-number">2</a>
-                <a href="#" class="page-dots">...</a>
-                <a href="#" class="page-number">5</a>
-                <a href="#" class="page-nav"><i class="fas fa-chevron-right"></i></a>
-            </div>
+    <a href="#" class="page-nav prev" id="prevPage" disabled>
+        <i class="fas fa-chevron-left"></i>
+    </a>
+    
+    <div class="page-numbers" id="pageNumbers">
+    </div>
+    
+    <a href="#" class="page-nav next" id="nextPage">
+        <i class="fas fa-chevron-right"></i>
+    </a>
+    
+    <div class="pagination-info">
+        <span id="pageInfo">Страница 1 из 3</span>
+        <span class="products-count">Товаров на странице: <span id="perPage">9</span></span>
+    </div>
+</div>
             
             <!-- КТА для заказа прайса -->
             <div class="catalog-cta">
